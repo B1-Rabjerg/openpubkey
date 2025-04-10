@@ -76,7 +76,7 @@ func (s *StandardOp) requestTokens(ctx context.Context, cicHash string) (*simple
 	options := []rp.Option{
 		rp.WithCookieHandler(cookieHandler),
 		rp.WithVerifierOpts(
-			rp.WithIssuedAtOffset(s.IssuedAtOffset), rp.WithNonce(
+			rp.WithIssuedAtOffset(1*time.Minute), rp.WithNonce(
 				func(ctx context.Context) string { return cicHash })),
 	}
 	options = append(options, rp.WithPKCE(cookieHandler))
