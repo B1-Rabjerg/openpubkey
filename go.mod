@@ -1,4 +1,4 @@
-module github.com/openpubkey/openpubkey
+module github.com/B1-Rabjerg/openpubkey/providers
 
 go 1.23.7
 
